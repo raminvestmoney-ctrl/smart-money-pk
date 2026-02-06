@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Money - Smart Money Decisions | Financial Freedom</title>
+    <meta name="description" content="Smart Money - Expert insights on banking, crypto, gold, stocks, halal investing, mutual funds, personal finance and online earning. Your trusted source for financial freedom.">
+    <meta name="keywords" content="smart money, finance blog, crypto halal haram, Bitcoin Islamic, PSX Pakistan Stock Exchange, gold silver price 2026, halal investing, KSE-100, digital wallets Pakistan, JazzCash EasyPaisa, mutual funds, online earning, personal finance, banking">
+    <meta name="author" content="Smart Money">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Smart Money - Smart Money Decisions | Financial Freedom">
+    <meta property="og:description" content="Daily articles on banking, crypto, stocks, gold, halal investing and more.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --secondary: #1e293b;
+            --accent: #f59e0b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon { font-size: 2rem; }
+
+        .logo-text { display: flex; flex-direction: column; }
+
+        .logo-name { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); }
+        .logo-name .highlight { color: var(--primary); }
+        .logo-tagline { font-size: 0.7rem; color: var(--text-light); }
+
+        .nav { display: flex; align-items: center; gap: 5px; }
+
+        .nav-link {
+            padding: 10px 15px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-toggle .arrow {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-white);
+            min-width: 220px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 3px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, #334155 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
+        .hero .highlight { color: var(--primary); }
+        .hero-subtitle { font-size: 1.3rem; color: var(--primary); font-weight: 600; margin-bottom: 15px; }
+        .hero-desc { font-size: 1.1rem; color: #94a3b8; max-width: 700px; margin: 0 auto 40px; }
+
+        .hero-stats { display: flex; justify-content: center; gap: 60px; }
+        .stat { text-align: center; }
+        .stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.9rem; color: #94a3b8; }
+
+        /* Section Titles */
+        .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 10px; }
+        .section-subtitle { text-align: center; color: var(--text-light); margin-bottom: 40px; }
+
+        /* Categories */
+        .categories-section { padding: 80px 0; }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .category-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .category-icon { font-size: 3rem; margin-bottom: 15px; }
+        .category-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+        .category-card p { font-size: 0.85rem; color: var(--text-light); }
+
+        /* Featured */
+        .featured-section { padding: 80px 0; background: var(--bg-white); }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .featured-card {
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .featured-card img { width: 100%; height: 200px; object-fit: cover; }
+
+        .featured-card-content { padding: 25px; }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .featured-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .featured-card p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px; }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Filter Banner */
+        .filter-banner {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+        }
+
+        .filter-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .clear-filter {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* Articles Grid */
+        .articles-section { padding: 80px 0; }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-card img { width: 100%; height: 180px; object-fit: cover; }
+
+        .article-card-content { padding: 20px; }
+
+        .article-card .category-badge {
+            background: var(--bg-light);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .article-card h3 { font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+
+        .article-card p {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-card .meta { font-size: 0.75rem; }
+
+        /* Single Article */
+        .single-article { padding: 40px 0 80px; }
+
+        .back-btn {
+            background: var(--bg-white);
+            border: 2px solid var(--border);
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .article-full {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-full img { width: 100%; height: 400px; object-fit: cover; }
+
+        .article-full-content { padding: 40px; }
+
+        .article-full h1 { font-size: 2rem; margin-bottom: 20px; line-height: 1.3; }
+
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .article-full .content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-full .content p { margin-bottom: 20px; }
+        .article-full .content h3 { margin: 30px 0 15px; font-size: 1.4rem; }
+        .article-full .content ul { margin: 15px 0 15px 25px; }
+        .article-full .content li { margin-bottom: 10px; }
+
+        .share-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .share-buttons { display: flex; gap: 10px; margin-top: 15px; }
+
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .share-btn:hover { transform: scale(1.05); }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.whatsapp { background: #25d366; }
+
+        /* Page Sections */
+        .page-section { padding: 40px 0 80px; min-height: 80vh; }
+
+        .page-content {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .page-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 15px;
+        }
+
+        .page-content h3 { font-size: 1.3rem; margin: 25px 0 15px; }
+        .page-content p { margin-bottom: 15px; line-height: 1.8; }
+        .page-content ul { margin: 15px 0 15px 25px; }
+        .page-content li { margin-bottom: 10px; }
+
+        /* Contact */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-icon { font-size: 2rem; }
+        .contact-item h4 { font-size: 0.9rem; margin-bottom: 5px; }
+        .contact-item p { font-size: 0.85rem; color: var(--text-light); margin: 0; }
+
+        .contact-form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter-content h2 { color: white; font-size: 2rem; margin-bottom: 10px; }
+        .newsletter-content p { color: rgba(255, 255, 255, 0.9); margin-bottom: 30px; }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary { background: var(--secondary); color: white; }
+        .btn-primary:hover { background: var(--text-dark); transform: translateY(-2px); }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo .logo-icon { font-size: 1.5rem; }
+        .footer-logo .logo-name { font-size: 1.3rem; font-weight: 700; color: white; }
+        .footer-desc { color: #94a3b8; font-size: 0.9rem; }
+
+        .footer-col h4 { font-size: 1.1rem; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--primary); }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* No Articles */
+        .no-articles { text-align: center; padding: 60px 20px; color: var(--text-light); }
+        .no-articles h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--text-dark); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .categories-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            
+            .nav {
+                position: fixed;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: var(--bg-white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                display: none;
+            }
+            
+            .nav.active { display: flex; }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                background: var(--bg-light);
+                margin-top: 10px;
+            }
+            
+            .dropdown.active .dropdown-menu { display: block; }
+            
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 30px; }
+            .stat-number { font-size: 1.8rem; }
+            
+            .categories-grid { grid-template-columns: 1fr; }
+            .featured-grid { grid-template-columns: 1fr; }
+            .articles-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .page-content { padding: 30px 20px; }
+            .contact-info { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .logo-tagline { display: none; }
+            .article-full img { height: 250px; }
+            .article-full-content { padding: 25px; }
+            .article-meta { flex-wrap: wrap; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo" id="homeLink">
+                    <span class="logo-icon">💰</span>
+                    <div class="logo-text">
+                        <span class="logo-name">Smart<span class="highlight">Money</span></span>
+                        <span class="logo-tagline">Smart Money Decisions | Financial Freedom</span>
+                    </div>
+                </a>
+                
+                <nav class="nav" id="mainNav">
+                    <a href="#" class="nav-link active" id="homeNavLink">Home</a>
+                    
+                    <div class="dropdown" id="categoryDropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Categories <span class="arrow">▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-category="banking">🏦 Banking & Wallets</a>
+                            <a href="#" class="dropdown-item" data-category="crypto">₿ Crypto Updates</a>
+                            <a href="#" class="dropdown-item" data-category="gold">🥇 Gold & Silver</a>
+                            <a href="#" class="dropdown-item" data-category="stocks">📈 Stock Market</a>
+                            <a href="#" class="dropdown-item" data-category="earning">💻 Online Earning</a>
+                            <a href="#" class="dropdown-item" data-category="finance">💰 Personal Finance</a>
+                            <a href="#" class="dropdown-item" data-category="mutual">📊 Mutual Funds</a>
+                            <a href="#" class="dropdown-item" data-category="halal">☪️ Halal Investing</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="nav-link page-nav-link" data-page="about">About</a>
+                    <a href="#" class="nav-link page-nav-link" data-page="contact">Contact</a>
+                    <a href="#" class="nav-link page-nav-link" data-page="disclaimer">Disclaimer</a>
+                    <a href="#" class="nav-link page-nav-link" data-page="privacy">Privacy Policy</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="heroSection">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to <span class="highlight">Smart Money</span></h1>
+                    <p class="hero-subtitle">Smart Money Decisions | Financial Freedom</p>
+                    <p class="hero-desc">Your trusted source for daily insights on banking, crypto, stocks, gold, halal investing, and personal finance. Make smarter financial decisions today!</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="articleCount">5+</span>
+                            <span class="stat-label">Articles</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Readers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section" id="categoriesSection">
+            <div class="container">
+                <h2 class="section-title">Explore Categories</h2>
+                <p class="section-subtitle">Choose a category to start your financial journey</p>
+                <div class="categories-grid" id="categoriesGrid">
+                    <!-- Categories loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="featured-section" id="featuredSection">
+            <div class="container">
+                <h2 class="section-title">Featured Articles</h2>
+                <p class="section-subtitle">Editor's pick - Must read articles</p>
+                <div class="featured-grid" id="featuredArticles"></div>
+            </div>
+        </section>
+
+        <!-- Filter Banner -->
+        <div class="filter-banner" id="filterBanner" style="display: none;">
+            <div class="container">
+                <div class="filter-content">
+                    <span>Showing articles in: <strong id="filterCategoryName"></strong></span>
+                    <button class="clear-filter" id="clearFilter">✕ Show All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Articles -->
+        <section class="articles-section" id="articlesSection">
+            <div class="container">
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Stay updated with our latest financial insights</p>
+                <div class="articles-grid" id="articlesGrid"></div>
+            </div>
+        </section>
+
+        <!-- Single Article View -->
+        <section class="single-article" id="singleArticle" style="display: none;">
+            <div class="container">
+                <button class="back-btn" id="backBtn">← Back to Articles</button>
+                <article class="article-full" id="articleContent"></article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="page-section" id="aboutPage" style="display: none;">
+            <div class="container">
+                <button class="back-btn page-back-btn">← Back to Home</button>
+                <div class="page-content">
+                    <h1>About Smart Money</h1>
+                    <p>Welcome to <strong>Smart Money</strong> - your trusted companion on the journey to financial freedom!</p>
+                    <p>We are a team of passionate financial experts, analysts, and writers dedicated to bringing you the most accurate, timely, and actionable financial information.</p>
+                    <h3>What We Cover:</h3>
+                    <ul>
+                        <li><strong>Banking & Wallets:</strong> Navigate the digital banking revolution</li>
+                        <li><strong>Crypto Updates:</strong> Stay ahead in the cryptocurrency market</li>
+                        <li><strong>Gold & Silver:</strong> Traditional investments that stand the test of time</li>
+                        <li><strong>Stock Market:</strong> Expert analysis and market insights</li>
+                        <li><strong>Online Earning:</strong> Legitimate ways to earn money online</li>
+                        <li><strong>Personal Finance:</strong> Master your money management</li>
+                        <li><strong>Mutual Funds:</strong> Build wealth through smart fund investments</li>
+                        <li><strong>Halal Investing:</strong> Shariah-compliant investment guidance</li>
+                    </ul>
+                    <h3>Our Promise:</h3>
+                    <p>Every article we publish is thoroughly researched and written with your financial success in mind.</p>
+                    <p><strong>Smart Money Decisions | Financial Freedom</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="page-section" id="contactPage" style="display: none;">
+            <div class="container">
+                <button class="back-btn page-back-btn">← Back to Home</button>
+                <div class="page-content">
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you!</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@smartmoney.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <h4>Social Media</h4>
+                                <p>@SmartMoneyOfficial</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Within 24-48 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="page-section" id="disclaimerPage" style="display: none;">
+            <div class="container">
+                <button class="back-btn page-back-btn">← Back to Home</button>
+                <div class="page-content">
+                    <h1>Disclaimer</h1>
+                    <p><strong>Last Updated: January 2025</strong></p>
+                    <h3>General Information</h3>
+                    <p>The information provided on Smart Money is for general informational purposes only.</p>
+                    <h3>Not Financial Advice</h3>
+                    <p>The content does not constitute financial, investment, trading, or any other form of professional advice. Always consult with a qualified financial advisor before making investment decisions.</p>
+                    <h3>Investment Risks</h3>
+                    <p>All investments carry risk. Past performance is not a guarantee of future results.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section class="page-section" id="privacyPage" style="display: none;">
+            <div class="container">
+                <button class="back-btn page-back-btn">← Back to Home</button>
+                <div class="page-content">
+                    <h1>Privacy Policy</h1>
+                    <p><strong>Last Updated: January 2025</strong></p>
+                    <h3>Information We Collect</h3>
+                    <p>We collect information you provide directly to us, such as when you subscribe to our newsletter or contact us.</p>
+                    <h3>How We Use Your Information</h3>
+                    <ul>
+                        <li>To send you newsletters and updates</li>
+                        <li>To respond to your inquiries</li>
+                        <li>To improve our website</li>
+                    </ul>
+                    <h3>Data Security</h3>
+                    <p>We implement appropriate security measures to protect your personal information.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletterSection">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated!</h2>
+                <p>Subscribe to our newsletter for the latest financial insights</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">💰</span>
+                        <span class="logo-name">Smart<span class="highlight">Money</span></span>
+                    </div>
+                    <p class="footer-desc">Your trusted source for smart financial decisions and achieving financial freedom.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" id="footerHome">Home</a></li>
+                        <li><a href="#" class="footer-page-link" data-page="about">About Us</a></li>
+                        <li><a href="#" class="footer-page-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" class="footer-cat-link" data-category="banking">Banking & Wallets</a></li>
+                        <li><a href="#" class="footer-cat-link" data-category="crypto">Crypto Updates</a></li>
+                        <li><a href="#" class="footer-cat-link" data-category="stocks">Stock Market</a></li>
+                        <li><a href="#" class="footer-cat-link" data-category="halal">Halal Investing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#" class="footer-page-link" data-page="disclaimer">Disclaimer</a></li>
+                        <li><a href="#" class="footer-page-link" data-page="privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Smart Money. All rights reserved. | Smart Money Decisions | Financial Freedom</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Articles Data -->
+    <script>
+        const articles = [
+            {
+                id: 1,
+                title: "Best Digital Wallets Globally in 2026 – A Worldwide Comparison",
+                category: "banking",
+                categoryName: "Banking & Wallets",
+                excerpt: "In 2026, digital wallets process trillions globally, driven by mobile-first Asia, contactless West, and inclusion in emerging markets. Compare Apple Pay, Google Wallet, JazzCash, EasyPaisa and more.",
+                content: `
+                    <p>In 2026, digital wallets process trillions globally, driven by mobile-first Asia, contactless West, and inclusion in emerging markets. Key players: Apple Pay (iOS security), Google Wallet (Android scale), PayPal (cross-border), Alipay/WeChat Pay (China super-apps), Venmo/Cash App (US P2P), and regional like PhonePe (India), M-Pesa (Africa).</p>
+                    
+                    <h3>Global Overview</h3>
+                    <ul>
+                        <li>The global mobile payments market reaches about $5 to $6 trillion in 2026</li>
+                        <li>The global mobile payments market grows at over 28 percent a year</li>
+                        <li>Asia-Pacific leads with more than 37 percent share using super-apps</li>
+                        <li>Alipay and WeChat Pay dominate in China</li>
+                        <li>PhonePe dominates in India</li>
+                        <li>North America favors Apple Pay and Google Wallet for NFC tap-to-pay</li>
+                        <li>Europe uses Google, Apple and Revolut</li>
+                        <li>Emerging markets like Pakistan and Africa rely on agent networks</li>
+                    </ul>
+                    
+                    <h3>Key Trends</h3>
+                    <p>The global mobile payments market trends include biometrics, AI fraud detection, wallets working together and wallet-to-wallet transfers. Digital wallets now go ahead of cash in regions. The security, tokenization and the speed of wallets are key. Digital wallets beat cash because of security and speed.</p>
+                    
+                    <h3>Regional Highlights</h3>
+                    <ul>
+                        <li><strong>Pakistan:</strong> JazzCash/EasyPaisa for reach, SadaPay for freelancers</li>
+                        <li><strong>India:</strong> PhonePe/Google Pay/Paytm via UPI dominance</li>
+                        <li><strong>China:</strong> Alipay/WeChat Pay (super-apps with social/e-commerce)</li>
+                        <li><strong>US/Europe:</strong> Apple Pay (premium security), Google Wallet, PayPal/Venmo (P2P)</li>
+                    </ul>
+                    
+                    <h3>Verdict</h3>
+                    <p>No universal best—Apple/Google for developed markets, regional super-apps for Asia/emerging. Future: More cross-border, AI integration.</p>
+                `,
+                author: "Smart Money Team",
+                date: "2026-01-16",
+                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop",
+                featured: true,
+                tags: ["digital wallets", "mobile payments", "Apple Pay", "Google Wallet", "JazzCash", "EasyPaisa", "fintech 2026", "Pakistan wallets"]
+            },
+            {
+                id: 2,
+                title: "Is Cryptocurrency Halal or Haram? Complete Islamic Guide 2026",
+                category: "halal",
+                categoryName: "Halal Investing",
+                excerpt: "Islamic scholars divide on cryptocurrency. Learn about Bitcoin, Ethereum from Shariah perspective - what's halal, what's haram, and how to invest according to Islamic principles.",
+                content: `
+                    <p>Cryptocurrency, including Bitcoin, Ethereum, Solana and many other digital coins is now a hot topic in finance. For Muslims around the world the main question stays the same: Is cryptocurrency halal or haram according to Shariah?</p>
+                    
+                    <p>Islamic scholars divide on this issue. There is no fatwa that everyone agrees on. Islamic scholars give opinions that range from allowed under conditions to strictly prohibited. The answer depends heavily on how crypto is used, the intention behind crypto and the specific type of transaction involved.</p>
+                    
+                    <h3>Core Islamic Principles Relevant to Cryptocurrency</h3>
+                    <p>Shariah requires that any form of wealth, currency or asset must meet these conditions:</p>
+                    <ul>
+                        <li><strong>Maal:</strong> Must be considered a valuable asset or property</li>
+                        <li><strong>No Gharar:</strong> There should be no excessive uncertainty/ambiguity</li>
+                        <li><strong>No Maisir:</strong> The activity must not involve gambling/speculation</li>
+                        <li><strong>No Riba:</strong> Must be free from interest/usury</li>
+                        <li>Should support economic activity and not facilitate money laundering or fraud</li>
+                    </ul>
+                    
+                    <p>If something works as currency, it must be a medium of exchange, a store of value, and a unit of account. Cryptocurrencies partially meet these criteria but fail in areas because of extreme price volatility and speculative nature.</p>
+                    
+                    <h3>Arguments That Cryptocurrency Is Haram</h3>
+                    
+                    <h4>1. Excessive Gharar (Uncertainty)</h4>
+                    <p>Crypto prices can swing 10-30% in a day. This volatility creates uncertainty not allowed in transactions. The hadith forbids selling fish in the sea or birds in the sky - showing the rule against gharar.</p>
+                    
+                    <h4>2. Maisir / Gambling Element</h4>
+                    <p>Crypto trading is often driven by speculation, not utility or genuine investment. Scholars compare day-trading, margin trading, futures and leveraged positions to gambling (qimar). The Quran says gambling is forbidden (Surah Al-Ma'idah 5:90-91).</p>
+                    
+                    <h4>3. Lack of Intrinsic Value / Backing</h4>
+                    <p>Scholars such as Mufti Taqi Usmani (Pakistan), Shaykh Shawki Allam (Grand Mufti of Egypt), and religious leaders of Turkey and Palestine have issued fatwas calling Bitcoin haram. They say Bitcoin has no asset behind it and no government support.</p>
+                    
+                    <h4>4. Facilitation of Unlawful Activities</h4>
+                    <p>Concerns that anonymity could help money laundering, drug trade and other haram activities made some scholars ban it outright.</p>
+                    
+                    <h3>Arguments That Cryptocurrency Can Be Halal</h3>
+                    
+                    <h4>1. It Qualifies as Mal (Asset)</h4>
+                    <p>Scholars like Mufti Faraz Adam (UK), Mufti Muhammad Abu-Bakar (USA), Dr. Ziyaad Mahomed (Malaysia) and the Fiqh Council of North America say Bitcoin and similar coins are commodities or property like gold or silver. When accepted as maal, spot trading (immediate buy/sell with full ownership transfer) is allowed.</p>
+                    
+                    <h4>2. Spot Trading Without Leverage</h4>
+                    <p>If you buy crypto with your own money, don't borrow, don't pay interest, take possession, hold for time and don't day trade - many scholars say it's halal, like buying shares, gold, or any asset.</p>
+                    
+                    <h4>3. Shariah-Compliant Alternatives Exist</h4>
+                    <p>Projects like Islamic Coin (ISLM), Haqq Network, MRHB DeFi are built for Shariah compliance - no interest, no excessive speculation, and zakat mechanisms.</p>
+                    
+                    <h4>4. Utility and Real-World Use</h4>
+                    <p>Blockchain technology improves supply chain, remittances, and financial inclusion. Some scholars say it supports economic benefit.</p>
+                    
+                    <h3>Spot vs. Derivatives – Key Distinction</h3>
+                    <p><strong>Spot trading</strong> (buy, own, sell later, no leverage, no futures) → Halal by majority of permissive scholars</p>
+                    <p><strong>Futures, options, margin trading, leverage, perpetual contracts</strong> → Haram (due to riba, gharar, and maisir)</p>
+                    
+                    <h3>Current Situation in 2026</h3>
+                    <ul>
+                        <li>More than 60% of Muslim-majority countries now allow regulated crypto trading</li>
+                        <li>Halal-certified platforms and coins are growing</li>
+                        <li>Majority of scholars still advise careful approach or avoidance</li>
+                    </ul>
+                    
+                    <h3>Final Verdict</h3>
+                    <p>Whether cryptocurrency is halal or haram depends on:</p>
+                    <ul>
+                        <li>The method (spot vs. leveraged/derivatives)</li>
+                        <li>The specific coin/project (conventional vs. Shariah-compliant)</li>
+                    </ul>
+                    
+                    <p><strong>For regular Muslims, the safest choice is to avoid crypto entirely unless:</strong></p>
+                    <ul>
+                        <li>You only use spot trading with your own funds</li>
+                        <li>You invest long-term, not trade frequently</li>
+                        <li>You choose Shariah-compliant platforms and coins</li>
+                        <li>You consult a scholar or mufti you trust for a fatwa</li>
+                    </ul>
+                    
+                    <p>Islam says we must earn and invest in halal, transparent ways. Islam wants wealth to have barakah, not bring anxiety from ups and downs.</p>
+                    
+                    <p><em>May Allah guide us to what is halal and keep us away from what is doubtful. Ameen.</em></p>
+                `,
+                author: "Smart Money Team",
+                date: "2026-01-15",
+                image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=400&fit=crop",
+                featured: true,
+                tags: ["cryptocurrency halal haram", "Bitcoin Islamic", "crypto Shariah", "halal investing", "Islamic finance", "fatwa crypto", "Muslim investment"]
+            },
+            {
+                id: 3,
+                title: "Market Volatility: Gold and Silver Price Swings Explained 2026",
+                category: "gold",
+                categoryName: "Gold & Silver",
+                excerpt: "Gold crossed $5,000/oz then fell to $4,800. Silver dropped 17-36% in one day. Understand what's driving precious metals volatility and investment outlook for 2026.",
+                content: `
+                    <p>Precious metals have had one of the biggest swings in recent memory. Gold went above $5,000 per ounce this week but then fell sharply. Gold now trades around $4,800 to $4,900 per ounce because the dollar is strong and investors are moving to safety. Silver has been more dramatic - falling as much as 17 to 36 percent in a single day, dropping to about $72 to $73 per ounce, later rising to $75 to $77 per ounce, wiping out most of the gains made in early 2026.</p>
+                    
+                    <h3>What's Causing the Selloff?</h3>
+                    <ul>
+                        <li>Profit-taking after surges (gold doubled in the year)</li>
+                        <li>Position liquidations</li>
+                        <li>Spillover from crypto and tech weakness</li>
+                        <li>Silver being more vulnerable as both industrial metal (solar, EVs) and investment asset</li>
+                    </ul>
+                    
+                    <h3>Expert Predictions</h3>
+                    <p><strong>JPMorgan and Goldman Sachs</strong> still see upside for gold - could reach $5,400 to $6,300 per ounce by year end or higher because of:</p>
+                    <ul>
+                        <li>Central bank buying</li>
+                        <li>Inflation hedges</li>
+                        <li>Geopolitical risks (U.S.-Iran tensions)</li>
+                        <li>De-dollarization trends</li>
+                    </ul>
+                    
+                    <p><strong>UBS</strong> says recent dips are just volatility in a structural uptrend.</p>
+                    
+                    <h3>Global Demand</h3>
+                    <p>ETFs and physical demand remain robust. Central banks continue accumulating. Investors rotate into metals as safe haven amid equity uncertainty. In Asia (India, China) and Europe, retail buying on dips has supported price floors.</p>
+                    
+                    <h3>Silver: The Affordable Alternative</h3>
+                    <p>Silver is way cheaper than gold at just Rs. 4,200 per tola - less than 2% of gold's cost. Plus, it's giving 15% returns in six months.</p>
+                    
+                    <h4>Why Silver is Hot:</h4>
+                    <ul>
+                        <li>Industries need it for solar panels, gadgets, and electric cars</li>
+                        <li>Green energy boom - Pakistan's solar adoption rising due to power problems</li>
+                        <li>Chinese factories using tons of silver for solar cells</li>
+                        <li>Demand in 2025 exceeded mine production</li>
+                        <li>U.S. rules on Russian metals and Red Sea shipping issues increasing demand</li>
+                    </ul>
+                    
+                    <h3>Silver Trend in Pakistan</h3>
+                    <ul>
+                        <li>Traders in Hyderabad report business way up</li>
+                        <li>Investors melting old stuff to make silver bars</li>
+                        <li>Women in Sukkur forming groups to save in silver (can't afford gold)</li>
+                        <li>Stores like Gul Ahmed now selling silver alongside jewelry</li>
+                    </ul>
+                    
+                    <p>One mom, Fatima, said: "I bought gold for my daughter's wedding, but silver is for her education later on."</p>
+                    
+                    <h3>Pakistan's Unique Position</h3>
+                    <ul>
+                        <li>Rare earth deals in 2026 and closer ties with China</li>
+                        <li>Gold smuggling issues - silver doesn't get stolen as much</li>
+                        <li>IMF limiting gold imports through duties, pushing people to silver</li>
+                        <li>IT exports growing, needing more chips containing silver</li>
+                        <li>Climate issues (floods, heatwaves) driving solar adoption requiring silver</li>
+                    </ul>
+                    
+                    <h3>How to Invest</h3>
+                    <ul>
+                        <li><strong>Beginners:</strong> Get silver coins from dealers like Pakistan Mint</li>
+                        <li><strong>Experienced:</strong> Use PMEX futures for silver (watch for rupee risks)</li>
+                        <li><strong>Tax:</strong> You'll need to pay taxes on gains after a year</li>
+                    </ul>
+                    
+                    <p><strong>Success Story:</strong> A Lahore trader, Imran, bought silver worth Rs. 1 lakh and turned it into Rs. 1.6 lakh in six months. Gold would've only made half that!</p>
+                    
+                    <h3>Outlook</h3>
+                    <p>Expect choppiness short-term, but structural drivers (debt concerns, trade wars) favor higher prices. Many experts advise 5-10% portfolio allocation for diversification.</p>
+                `,
+                author: "Smart Money Team",
+                date: "2026-01-14",
+                image: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=800&h=400&fit=crop",
+                featured: true,
+                tags: ["gold price 2026", "silver investment", "precious metals", "Pakistan gold", "silver Pakistan", "PMEX", "gold vs silver", "safe haven"]
+            },
+            {
+                id: 4,
+                title: "Bitcoin Market Analysis: What's Driving the Decline in 2026?",
+                category: "crypto",
+                categoryName: "Crypto Updates",
+                excerpt: "Bitcoin dropped from $126,000 to $60,000. Total crypto market cap fell 6.4% in 24 hours. Understand the factors behind the crash and what experts predict next.",
+                content: `
+                    <p>The global cryptocurrency market is struggling as of February 2026. The total market cap has fallen to around $2.49 trillion - down 6.4% in just 24 hours. Bitcoin, the biggest cryptocurrency, has taken a major hit and is now near $60,000 to $63,000 after falling below $61,000 earlier this week.</p>
+                    
+                    <p>This is a massive drop - the price has gone down by 50 percent from over $126,000 back in October 2025. This big drop has wiped out the gains seen after the 2024 election. Ether and other major altcoins like Solana and Binance Coin have lost more than 30 percent of their value so far this year.</p>
+                    
+                    <h3>What's Causing the Crash?</h3>
+                    
+                    <h4>1. Tech Stock Correlation</h4>
+                    <p>People started feeling bad about the market after tech stocks began falling and the Nasdaq started struggling - this had a big impact on crypto.</p>
+                    
+                    <h4>2. Forced Liquidations</h4>
+                    <p>Many traders who had borrowed money to buy crypto were forced to sell their positions.</p>
+                    
+                    <h4>3. ETF Outflows</h4>
+                    <p>People are pulling money out of Bitcoin and Ethereum funds - over $544 million withdrawn in just a few days.</p>
+                    
+                    <h4>4. Institutional Selling</h4>
+                    <p>Institutional players who used to be buying are now selling. U.S. investment funds have seen billions of dollars withdrawn since January.</p>
+                    
+                    <h4>5. AI Concerns</h4>
+                    <p>In Asia and Europe, concerns about too much money going into AI (taking away from other investments) accelerated the decline.</p>
+                    
+                    <h4>6. Geopolitical Uncertainty</h4>
+                    <p>U.S.-Iran talks happening in Oman are adding to market nervousness.</p>
+                    
+                    <h3>Historical Perspective</h3>
+                    <p>Looking at history, Bitcoin has dropped 50 to 80 percent every cycle (like in the 2021-2022 crypto winter), then usually recovers. More people are using Bitcoin, and U.S. regulations are getting clearer - both positive signs.</p>
+                    
+                    <h3>Expert Views</h3>
+                    <p>Many experts think the market is just resetting - it's not the end of Bitcoin. However, short-term, Bitcoin could fall further to $40,000-$50,000 if sentiment doesn't improve.</p>
+                    
+                    <h3>Investment Advice</h3>
+                    <ul>
+                        <li>Buy when prices are low</li>
+                        <li>Don't buy a lot at once - use Dollar Cost Averaging (DCA)</li>
+                        <li>Buy a little at a time during dips</li>
+                        <li>Think long-term, not short-term trading</li>
+                    </ul>
+                    
+                    <h3>Key Takeaway</h3>
+                    <p>Crypto's correlation with risk assets (tech stocks, equities) has amplified the pain. This reminds investors that crypto is still highly volatile - not yet a true "digital gold" hedge in every scenario.</p>
+                `,
+                author: "Smart Money Team",
+                date: "2026-02-06",
+                image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&h=400&fit=crop",
+                featured: false,
+                tags: ["Bitcoin crash 2026", "crypto market", "BTC price", "Ethereum", "cryptocurrency news", "Bitcoin analysis", "crypto investment"]
+            },
+            {
+                id: 5,
+                title: "Complete PSX Investment Guide: Pakistan Stock Exchange for Beginners 2026",
+                category: "stocks",
+                categoryName: "Stock Market",
+                excerpt: "KSE-100 rose 60% last year. Learn how to invest in Pakistan Stock Exchange - from opening account to picking blue-chip stocks like HBL, PPL, Lucky Cement.",
+                content: `
+                    <p>Imagine a goldmine in Pakistan. Regular folks are turning savings into serious money through the Pakistan Stock Exchange (PSX). The KSE-100 index rose 60 percent in rupee terms last year, leaving gold, T-bills and many world markets behind.</p>
+                    
+                    <h3>Why Invest in PSX Now?</h3>
+                    <ul>
+                        <li>Over ten years, KSE-100 has averaged 11.92% per year</li>
+                        <li>PKR 100,000 investment could have turned into PKR 159,000 in one year</li>
+                        <li>IMF's help stabilizing economy</li>
+                        <li>Interest rates dropping from 20.5% to around 11%</li>
+                        <li>Fitch's better rating raising investor confidence</li>
+                    </ul>
+                    
+                    <h3>Understanding Stocks</h3>
+                    <p>Stocks give you a piece of ownership in companies like banks, cement companies and tech firms - without having to run them. Companies trade stocks on PSX after raising money through IPOs. Prices move based on supply/demand, company performance, and economic factors like OPEC decisions.</p>
+                    
+                    <p><strong>You make money through:</strong></p>
+                    <ul>
+                        <li>Dividends - when company pays profit</li>
+                        <li>Capital gains - when share prices go up</li>
+                    </ul>
+                    
+                    <p>Unlike real estate, stocks are easy to buy and sell, giving lots of flexibility.</p>
+                    
+                    <h3>Key Indices</h3>
+                    <ul>
+                        <li><strong>KSE-100:</strong> Tracks 100 largest companies - for growth investing</li>
+                        <li><strong>KMI-30:</strong> Follows Shariah law - for halal/ethical investing</li>
+                    </ul>
+                    
+                    <h3>How to Get Started</h3>
+                    <p>You don't need a degree. PKR 5,000 to 25,000 is enough to start!</p>
+                    
+                    <ol>
+                        <li><strong>Choose a broker</strong> regulated by SECP (like Chase Securities or Foundation Securities)</li>
+                        <li><strong>Open account</strong> online with KYC, UIN and CDC sub-account (takes few days)</li>
+                        <li><strong>Deposit money</strong> via bank transfer</li>
+                        <li><strong>Use the app</strong> to see prices, charts and place orders</li>
+                    </ol>
+                    
+                    <h3>Doing Your Research</h3>
+                    <p>Look at:</p>
+                    <ul>
+                        <li><strong>Balance sheets:</strong> Are assets more than debts?</li>
+                        <li><strong>Income statements:</strong> Do revenues beat expenses?</li>
+                        <li><strong>Cash flow reports:</strong> How healthy is the company really?</li>
+                    </ul>
+                    
+                    <h4>Key Ratios to Know:</h4>
+                    <ul>
+                        <li><strong>EPS (Earnings Per Share):</strong> Shows profit per share</li>
+                        <li><strong>P/E (Price-to-Earnings):</strong> Lower usually means cheaper stock</li>
+                        <li><strong>Dividend Yield:</strong> For regular income</li>
+                        <li><strong>ROA (Return on Assets):</strong> How well company is managed</li>
+                    </ul>
+                    
+                    <h3>Top Blue-Chip Investments</h3>
+                    
+                    <h4>Banking Sector:</h4>
+                    <ul>
+                        <li>HBL (Habib Bank Limited)</li>
+                        <li>UBL (United Bank Limited)</li>
+                    </ul>
+                    
+                    <h4>Energy Sector:</h4>
+                    <ul>
+                        <li>PPL (Pakistan Petroleum Limited) - solid cash flows</li>
+                    </ul>
+                    
+                    <h4>Cement Sector:</h4>
+                    <ul>
+                        <li>Lucky Cement</li>
+                    </ul>
+                    
+                    <p>Blue-chips are super stable, pay good dividends, easy to trade - giving 50-60% returns recently (though might not jump as high as risky stocks).</p>
+                    
+                    <h3>Higher Risk, Higher Reward Options</h3>
+                    <ul>
+                        <li><strong>Tech stocks:</strong> Systems Ltd. - over 70% gains in good times</li>
+                        <li><strong>Auto:</strong> Honda - benefits from Pakistan's growing economy</li>
+                        <li><strong>Shariah-compliant:</strong> KMI-30 stocks - around 55% returns with ethical peace of mind</li>
+                    </ul>
+                    
+                    <h3>Portfolio Strategy</h3>
+                    <ul>
+                        <li>70% in stable blue-chips</li>
+                        <li>30% in riskier, higher-potential stocks</li>
+                        <li>Reinvest dividends for compounding</li>
+                        <li>Use market or limit orders, watch daily price limits</li>
+                        <li>Think long-term!</li>
+                    </ul>
+                    
+                    <h3>Warnings</h3>
+                    <ul>
+                        <li>Stay away from scams and insider trading</li>
+                        <li>Ignore "hot tips" - make decisions based on research</li>
+                        <li>Good fundamentals are always better than hype</li>
+                    </ul>
+                    
+                    <p>Track your investments through apps, but always think long-term. Let compounding do its magic!</p>
+                `,
+                author: "Smart Money Team",
+                date: "2026-01-13",
+                image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop",
+                featured: true,
+                tags: ["PSX", "Pakistan Stock Exchange", "KSE-100", "stocks Pakistan", "HBL", "PPL", "Lucky Cement", "investment guide", "beginner stocks"]
+            }
+        ];
+
+        const categories = [
+            { id: 'banking', name: 'Banking & Wallets', icon: '🏦', desc: 'Digital banking, e-wallets, and payment solutions' },
+            { id: 'crypto', name: 'Crypto Updates', icon: '₿', desc: 'Latest cryptocurrency news and market analysis' },
+            { id: 'gold', name: 'Gold & Silver', icon: '🥇', desc: 'Precious metals prices and investment tips' },
+            { id: 'stocks', name: 'Stock Market', icon: '📈', desc: 'Stock analysis, tips, and market updates' },
+            { id: 'earning', name: 'Online Earning', icon: '💻', desc: 'Freelancing, passive income, and side hustles' },
+            { id: 'finance', name: 'Personal Finance', icon: '💰', desc: 'Budgeting, saving, and money management' },
+            { id: 'mutual', name: 'Mutual Funds', icon: '📊', desc: 'Fund analysis and investment strategies' },
+            { id: 'halal', name: 'Halal Investing', icon: '☪️', desc: 'Shariah-compliant investment options' }
+        ];
+    </script>
+
+    <!-- Main JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const mainNav = document.getElementById('mainNav');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const filterBanner = document.getElementById('filterBanner');
+            const filterCategoryName = document.getElementById('filterCategoryName');
+            const clearFilterBtn = document.getElementById('clearFilter');
+            const categoryDropdown = document.getElementById('categoryDropdown');
+            
+            let currentCategory = null;
+
+            // Initialize
+            document.getElementById('articleCount').textContent = articles.length + '+';
+            loadCategories();
+            loadFeaturedArticles();
+            loadAllArticles();
+            setupEventListeners();
+
+            function loadCategories() {
+                const grid = document.getElementById('categoriesGrid');
+                grid.innerHTML = categories.map(cat => `
+                    <div class="category-card" data-category="${cat.id}">
+                        <div class="category-icon">${cat.icon}</div>
+                        <h3>${cat.name}</h3>
+                        <p>${cat.desc}</p>
+                    </div>
+                `).join('');
+            }
+
+            function loadFeaturedArticles() {
+                const container = document.getElementById('featuredArticles');
+                const featured = articles.filter(a => a.featured).slice(0, 4);
+                
+                container.innerHTML = featured.map(article => `
+                    <div class="featured-card" data-id="${article.id}">
+                        <img src="${article.image}" alt="${article.title}" onerror="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.minHeight='200px';">
+                        <div class="featured-card-content">
+                            <span class="category-badge">${article.categoryName}</span>
+                            <h3>${article.title}</h3>
+                            <p>${article.excerpt}</p>
+                            <div class="meta">
+                                <span>By ${article.author}</span>
+                                <span>${formatDate(article.date)}</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            function loadAllArticles(category = null) {
+                const container = document.getElementById('articlesGrid');
+                let filtered = articles;
+                
+                if (category) {
+                    filtered = articles.filter(a => a.category === category);
+                    filterBanner.style.display = 'block';
+                    filterCategoryName.textContent = getCategoryName(category);
+                } else {
+                    filterBanner.style.display = 'none';
+                }
+
+                filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                if (filtered.length === 0) {
+                    container.innerHTML = '<div class="no-articles" style="grid-column: 1/-1;"><h3>No articles found</h3><p>Check back soon!</p></div>';
+                    return;
+                }
+
+                container.innerHTML = filtered.map(article => `
+                    <div class="article-card" data-id="${article.id}">
+                        <img src="${article.image}" alt="${article.title}" onerror="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.minHeight='180px';">
+                        <div class="article-card-content">
+                            <span class="category-badge">${article.categoryName}</span>
+                            <h3>${article.title}</h3>
+                            <p>${article.excerpt}</p>
+                            <div class="meta">
+                                <span>${article.author}</span>
+                                <span>${formatDate(article.date)}</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Re-attach click events
+                attachArticleClicks();
+            }
+
+            function attachArticleClicks() {
+                document.querySelectorAll('.article-card, .featured-card').forEach(card => {
+                    card.onclick = () => openArticle(card.dataset.id);
+                });
+            }
+
+            function openArticle(id) {
+                const article = articles.find(a => a.id == id);
+                if (!article) return;
+
+                hideAllSections();
+                document.getElementById('singleArticle').style.display = 'block';
+                
+                document.getElementById('articleContent').innerHTML = `
+                    <img src="${article.image}" alt="${article.title}" onerror="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.minHeight='300px';">
+                    <div class="article-full-content">
+                        <span class="category-badge">${article.categoryName}</span>
+                        <h1>${article.title}</h1>
+                        <div class="article-meta">
+                            <span>✍️ ${article.author}</span>
+                            <span>📅 ${formatDate(article.date)}</span>
+                            <span>📁 ${article.categoryName}</span>
+                        </div>
+                        <div class="content">${article.content}</div>
+                        <div class="share-section">
+                            <h4>Share this article:</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn facebook" onclick="shareOn('facebook')">Facebook</button>
+                                <button class="share-btn twitter" onclick="shareOn('twitter')">Twitter</button>
+                                <button class="share-btn whatsapp" onclick="shareOn('whatsapp')">WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                window.scrollTo(0, 0);
+            }
+
+            function hideAllSections() {
+                document.getElementById('heroSection').style.display = 'none';
+                document.getElementById('categoriesSection').style.display = 'none';
+                document.getElementById('featuredSection').style.display = 'none';
+                document.getElementById('articlesSection').style.display = 'none';
+                document.getElementById('singleArticle').style.display = 'none';
+                document.getElementById('newsletterSection').style.display = 'none';
+                filterBanner.style.display = 'none';
+                hideAllPages();
+            }
+
+            function hideAllPages() {
+                document.querySelectorAll('.page-section').forEach(p => p.style.display = 'none');
+            }
+
+            function showHome() {
+                document.getElementById('heroSection').style.display = 'block';
+                document.getElementById('categoriesSection').style.display = 'block';
+                document.getElementById('featuredSection').style.display = 'block';
+                document.getElementById('articlesSection').style.display = 'block';
+                document.getElementById('newsletterSection').style.display = 'block';
+                document.getElementById('singleArticle').style.display = 'none';
+                hideAllPages();
+                currentCategory = null;
+                loadAllArticles();
+                window.scrollTo(0, 0);
+            }
+
+            function showPage(pageId) {
+                hideAllSections();
+                const page = document.getElementById(pageId + 'Page');
+                if (page) {
+                    page.style.display = 'block';
+                    document.getElementById('newsletterSection').style.display = 'block';
+                    window.scrollTo(0, 0);
+                }
+            }
+
+            function filterByCategory(category) {
+                currentCategory = category;
+                loadAllArticles(category);
+                
+                document.getElementById('heroSection').style.display = 'none';
+                document.getElementById('categoriesSection').style.display = 'none';
+                document.getElementById('featuredSection').style.display = 'none';
+                document.getElementById('articlesSection').style.display = 'block';
+                document.getElementById('singleArticle').style.display = 'none';
+                hideAllPages();
+                
+                mainNav.classList.remove('active');
+                document.getElementById('articlesSection').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function setupEventListeners() {
+                // Mobile menu
+                mobileMenuBtn.onclick = () => mainNav.classList.toggle('active');
+
+                // Home links
+                document.getElementById('homeLink').onclick = (e) => { e.preventDefault(); showHome(); };
+                document.getElementById('homeNavLink').onclick = (e) => { e.preventDefault(); showHome(); mainNav.classList.remove('active'); };
+                document.getElementById('footerHome').onclick = (e) => { e.preventDefault(); showHome(); };
+
+                // Category dropdown items
+                document.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.onclick = (e) => {
+                        e.preventDefault();
+                        filterByCategory(item.dataset.category);
+                    };
+                });
+
+                // Category cards
+                document.getElementById('categoriesGrid').onclick = (e) => {
+                    const card = e.target.closest('.category-card');
+                    if (card) filterByCategory(card.dataset.category);
+                };
+
+                // Clear filter
+                clearFilterBtn.onclick = showHome;
+
+                // Back button
+                document.getElementById('backBtn').onclick = showHome;
+
+                // Page back buttons
+                document.querySelectorAll('.page-back-btn').forEach(btn => {
+                    btn.onclick = showHome;
+                });
+
+                // Nav page links
+                document.querySelectorAll('.page-nav-link').forEach(link => {
+                    link.onclick = (e) => {
+                        e.preventDefault();
+                        showPage(link.dataset.page);
+                        mainNav.classList.remove('active');
+                    };
+                });
+
+                // Footer page links
+                document.querySelectorAll('.footer-page-link').forEach(link => {
+                    link.onclick = (e) => {
+                        e.preventDefault();
+                        showPage(link.dataset.page);
+                    };
+                });
+
+                // Footer category links
+                document.querySelectorAll('.footer-cat-link').forEach(link => {
+                    link.onclick = (e) => {
+                        e.preventDefault();
+                        showHome();
+                        setTimeout(() => filterByCategory(link.dataset.category), 100);
+                    };
+                });
+
+                // Mobile dropdown toggle
+                if (window.innerWidth <= 768) {
+                    categoryDropdown.querySelector('.dropdown-toggle').onclick = (e) => {
+                        e.preventDefault();
+                        categoryDropdown.classList.toggle('active');
+                    };
+                }
+
+                // Forms
+                document.getElementById('newsletterForm').onsubmit = (e) => {
+                    e.preventDefault();
+                    alert('Thank you for subscribing to Smart Money!');
+                    e.target.reset();
+                };
+
+                document.getElementById('contactForm').onsubmit = (e) => {
+                    e.preventDefault();
+                    alert('Thank you! We will get back to you soon.');
+                    e.target.reset();
+                };
+
+                // Initial article clicks
+                attachArticleClicks();
+            }
+
+            function formatDate(dateString) {
+                return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+
+            function getCategoryName(id) {
+                const cat = categories.find(c => c.id === id);
+                return cat ? cat.name : id;
+            }
+        });
+
+        function shareOn(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.title);
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'facebook': shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url; break;
+                case 'twitter': shareUrl = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + text; break;
+                case 'whatsapp': shareUrl = 'https://wa.me/?text=' + text + '%20' + url; break;
+            }
+            if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    </script>
+</body>
+</html>
