@@ -1,0 +1,18 @@
+{
+  "name": "wa-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp auto-sender bot — cloud version",
+  "main": "wa.js",
+  "scripts": {
+    "start": "node wa.js"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "latest",
+    "express": "latest",
+    "qrcode-terminal": "latest",
+    "puppeteer": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

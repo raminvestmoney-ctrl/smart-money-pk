@@ -1,0 +1,7 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+# If you want to start clean on Railway each time, ignore wa_session
+wa_session/

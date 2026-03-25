@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wa-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node wa.js
+    envVars:
+      - key: WA_GROUP_ID
+        value: PASTE_YOUR_GROUP_ID_HERE
+      - key: PORT
+        generateValue: false
+        value: 10000

@@ -1,0 +1,2 @@
+[phases.setup]
+nixPkgs = ["...", "python3", "google-chrome-stable", "glib", "nss", "nspr", "atk", "at-spi2-atk", "libdrm", "expat", "libxcb", "libxshmfence", "libx11", "libxcomposite", "libxdamage", "libxext", "libxfixes", "libxrandr", "libgbm", "pango", "cairo", "asound"]
